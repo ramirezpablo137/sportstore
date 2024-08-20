@@ -1,0 +1,418 @@
+/* Estilo general */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Para evitar problemas de desbordamiento */
+}
+
+/* Estilo de cabecera y navegación */
+header {
+    background-color: #000; /* Negro */
+    color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    max-height: 80px; /* Ajusta según el tamaño de tu logo */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #333; /* Gris oscuro */
+}
+
+/* Estilo de la página principal */
+main {
+    max-width: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Para prevenir el desbordamiento */
+}
+
+/* Banner Principal */
+.banner {
+    background-color: #1b1b1b;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('assets/images/banner.png'); /* Imagen de fondo para el banner */
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* Blanco */
+}
+
+.banner p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.banner-btn {
+    background-color: #333; /* Gris oscuro */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #000; /* Negro */
+}
+
+/* Slider de Imágenes */
+.slider {
+    position: relative;
+    max-width: 80%; /* Reducir el ancho del slider */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto; /* Mantener proporciones de imagen */
+    max-height: 400px; /* Limitar altura máxima del slider */
+    object-fit: cover; /* Ajustar imagen para cubrir el área */
+    border-radius: 10px;
+}
+
+/* Controles del Slider */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.slider-controls span {
+    cursor: pointer;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/* Sección de Productos Destacados */
+.highlights {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.highlights h2 {
+    font-size: 2.5em;
+    color: #333; /* Gris oscuro */
+    margin-bottom: 40px;
+}
+
+/* Estilo para los productos */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los productos */
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 20px); /* 3 productos por fila */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.product .price {
+    font-size: 1.2em;
+    color: #333; /* Gris oscuro */
+    margin: 10px 0;
+}
+
+.product button {
+    background-color: #333; /* Gris oscuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #000; /* Negro */
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000; /* Color negro para las etiquetas */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #000; /* Color negro para el botón */
+    color: #fff; /* Color blanco para el texto del botón */
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #333; /* Color gris oscuro en hover */
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+.contact-info h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #000; /* Color negro para los subtítulos */
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    color: #333; /* Color gris oscuro para el texto */
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+    color: #fff;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+}
+
+/* Ajustes de responsividad */
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 20px); /* 2 productos por fila en pantallas más pequeñas */
+    }
+
+    .slider {
+        max-width: 90%; /* Ajustar slider en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%; /* 1 producto por fila en pantallas muy pequeñas */
+    }
+
+    .slider {
+        max-width: 100%; /* Ajustar slider en pantallas muy pequeñas */
+    }
+}
+
+/* Estilo de la tabla del carrito */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Estilo para los botones del carrito */
+button {
+    background-color: #333; /* Gris oscuro */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #000; /* Negro */
+}
+
+/* Estilo del formulario dentro de la tabla */
+form {
+    display: inline;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilo del total del carrito */
+.cart-total {
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-align: right;
+    color: #333;
+}
+
+/* Estilo para el botón de continuar con la compra */
+.checkout-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Gris oscuro */
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #000; /* Negro */
+}
